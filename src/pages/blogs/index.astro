@@ -1,0 +1,17 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const postsArr = ["./post-1/", "./post-2/", "./post-3/"];
+---
+
+<MainLayout>
+  <ul>
+    {
+      postsArr.map((item) => (
+        <li>
+          <a href={item}>{item}</a>
+        </li>
+      ))
+    }
+  </ul>
+</MainLayout>
